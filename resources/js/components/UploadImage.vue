@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<input type="file" name="image" @change='changeImage'>
-		<img :src="avatar" alt="" width="50px">
+		// <img :src="avatar" alt="" width="50px">
 		<button @click="uploadImage">upload</button>
 	</div>
 </template>
@@ -10,11 +10,12 @@
 import axios from 'axios'
 
 export default{
-	props: ['user'],
+	// props: ['user'],
 	data(){
 		return {
-			avatar: this.user.avatar,
-			form: null
+			avatar: null,
+			// avatar: this.user.avatar,
+			field: null
 		}
 	},
 	methods: {
@@ -24,18 +25,22 @@ export default{
 			let reader = new FileReader();
 			reader.readAsDataURL(image);
 			reader.onload = e => {
-				this.avatar = e.target.result;
+				this.avatar = e.target.result;		
 			}
 
-			// let form = new FormData();
-			// form.append('image', image);
-			// this.form = form;
-			// console.log(this.form)
+			let field = new FormData();			
+			field.append('image', this.avatar);
+			console.log(field.values())	
+			this.field = field;
+			console.log(this.avatar)	
+			
+
+			// console.log(this.field)
 
 		},
 		uploadImage()
 		{
-			axios.post('/upload', {'image': this.avatar})
+			axios.post('/upload', {'image': this.field})
 			.then(res => {
 				console.log(res)
 			})

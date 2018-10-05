@@ -5,13 +5,13 @@
 @endif
 @if(isset($edit))
 <a class="icon" href="{{ $edit or '' }}">
-    <i class="fa fa-fw fa-pencil">edit</i>
+		@include('icons.edit')
 </a>
 @endif
 @if(isset($delete))
 		<span class="icon"> 
 		   <a class="icon " href="{{ $delete or '' }}">
-		       <i class="fa text-danger fa-fw fa-trash">delete</i>
+		       @include('icons.delete')
 		   </a>
 		</span>
 @endif

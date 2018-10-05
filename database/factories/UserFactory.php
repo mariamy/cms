@@ -35,3 +35,11 @@ $factory->define(App\Category::class, function (Faker $faker) {
         'title' => $faker->text(10)
     ];
 });
+
+$factory->define(App\Voice::class, function (Faker $faker) {
+    return [
+        'title' => $faker->text(20),
+        'body' => $faker->text(1000),
+        'message' => $faker->text(250)
+    ];
+});

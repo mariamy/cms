@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
+<upload-image-component></upload-image-component>
 <div>
 	<div class="d-flex justify-content-end pb-2 bt-2">
 		<a href="{{route('posts.create')}}" class="btn btn-primary">

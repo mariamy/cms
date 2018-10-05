@@ -28,6 +28,12 @@ class ProfileController extends Controller
     
     }
 
+    public function upload(Request $request)
+    {
+       return  $request;
+    
+    }
+
     public function create()
     {
         //

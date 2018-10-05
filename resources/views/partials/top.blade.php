@@ -1,8 +1,8 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="row justify-content-between" style="width: 100%">
+                    <a href="#menu-toggle" class="" id="menu-toggle">
+                        @include('icons.menu')
+                    </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

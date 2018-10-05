@@ -26,6 +26,15 @@ Route::prefix('posts')->group(function (){
 	Route::get('/delete/{id}', 'PostsController@destroy')->name('posts.delete');
 });
 
+Route::prefix('voices')->group(function (){
+	Route::get('/', 'VoicesController@index')->name('voices');
+	Route::get('/create', 'VoicesController@create')->name('voice.create');
+	Route::get('/edit/{id}', 'VoicesController@edit')->name('voice.edit');
+	Route::post('/store', 'VoicesController@store')->name('voice.store');
+	Route::post('/update/{id}', 'VoicesController@update')->name('voice.update');
+	Route::get('/delete/{id}', 'VoicesController@destroy')->name('voice.delete');
+});
+
 Route::get('profile', 'ProfileController@index')->name('profile');
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
@@ -35,6 +44,8 @@ Route::prefix('media')->group(function (){
 });
 Route::post('/upload', 'MediaController@store')->name('uploadmedia');
 Route::post('uploadavatar', 'ProfileController@upload_avatar')->name('uploadavatar');
+
+Route::post('upload', 'ProfileController@upload')->name('upload');
 
 
 

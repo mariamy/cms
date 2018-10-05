@@ -4,9 +4,8 @@
           :width=250
           :height=200
           :border=1
-          ref="vueavatar"
-          @vue-avatar-editor:image-ready="onImageReady"
-          :image="postimage"
+          ref="vueavatar"         
+          :image="img"
         >
         </vue-avatar>
     </div>

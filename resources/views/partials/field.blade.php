@@ -20,4 +20,4 @@
           <strong>{{ $errors->first($name) }}</strong>
       </span>
     @endif
-  </div>
+</div>

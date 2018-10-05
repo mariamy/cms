@@ -18,6 +18,8 @@ window.Vue = require('vue');
 Vue.component('avatar-component', require('./components/AvatarComponent.vue'));
 Vue.component('post-image-component', require('./components/PostImageComponent'));
 
+Vue.component('upload-image-component', require('./components/UploadImage'));
+
 const app = new Vue({
     el: '#app'
 });
